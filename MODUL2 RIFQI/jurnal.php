@@ -15,6 +15,9 @@
 // tinggi_badan atau $berat_badan tidak boleh kosong nilainya, kalau kosong buatkanlah pesan error
 // silakan taruh code kalian di bawah
     $errormsg;
+    $messagebmi = isset($messagebmi)? $messagebmi:"";
+    $hasilbmi = isset($hasilbmi)? $hasilbmi:"";
+    $errormsg = isset($errormsg)? $errormsg:"";
 
     if ($tinggi_badan == "" || $berat_badan ==""){
         $errormsg = "Tidak Boleh Kosong Nilainya!";
@@ -31,7 +34,8 @@
         $tinggi_badan = $tinggi_badan/100; //konversi jadi meter
 
         $bmi = $berat_badan / pow($tinggi_badan, 2); //konversi ke BMI pakai fungsi perpangkatan
-        $hasilbmi;
+        
+        
 
         if ($bmi <= 18.4) {
             $hasilbmi = "Underweight";
