@@ -49,6 +49,7 @@ $search = mysqli_query($connect, $query1);
 //     Buat di dalamnya variabel session dengan key message untuk menampilkan pesan error karena data email sudah terdaftar
         else {
             $_SESSION['message'] = 'Email sudah terdaftar.';
+            $_SESSION['color'] = 'danger';
             header('Location: ../views/register.php');
         }
 //
