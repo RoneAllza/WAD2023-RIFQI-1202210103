@@ -2,7 +2,7 @@
 session_start();
 // (1) Hapus cookie dengan key id
 
-setcookie('id', '', time() - 3600, '../views');
+setcookie('id', null, time() - 3600, '../views');
 unset($_COOKIE['id']);
 // 
 
