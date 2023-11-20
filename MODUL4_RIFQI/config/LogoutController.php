@@ -1,6 +1,7 @@
 <?php 
 session_start();
-// (1) Hapus cookie dengan key id 
+// (1) Hapus cookie dengan key id
+unset($_COOKIE['id']); 
 setcookie('id', '', time() - 3600, '../views');
 // 
 
