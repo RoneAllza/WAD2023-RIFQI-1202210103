@@ -38,7 +38,7 @@ function login($input) {
 
                 // e. Buat kondisi untuk mengecek apakah checkbox "remember me" terisi kemudian set cookie dan isi dengan id
                 if (isset($_POST['remember'])){
-                    setcookie('id', $data['id'], 86400);
+                    setcookie('id', $data['id'], time()+3600,'/');
                 }
             } 
          // 
