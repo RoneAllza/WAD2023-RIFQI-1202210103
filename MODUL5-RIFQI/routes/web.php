@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ShowroomMobilController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+Route::get('/showroom', [ShowroomMobilController::class, 'index'])->name('showroom.index'); 
+Route::get('/showroom/create', [ShowroomMobilController::class, 'create'])->name('showroom.create'); 
+Route::post('/showroom/store', [ShowroomMobilController::class, 'store'])->name('showroom.store'); 
